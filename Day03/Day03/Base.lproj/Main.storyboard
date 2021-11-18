@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--startPage-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="startPage" title="startPage" id="BYZ-38-t0r" customClass="ViewController" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgF-to-YKc">
+                                <rect key="frame" x="92" y="74" width="230" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="page2">
+                                    <color key="titleColor" red="0.88888619970000005" green="1" blue="0.35094537409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OK4-kY-esr" kind="show" id="rUg-SQ-XWy"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a2w-nH-Imw">
+                                <rect key="frame" x="302" y="585" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchImageOnOff:" destination="4Mo-G0-bSD" eventType="valueChanged" id="Wkn-ga-a0i"/>
+                                    <action selector="switchImageOnOff:" destination="BYZ-38-t0r" eventType="valueChanged" id="cGj-rX-TUj"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpv-wP-Qmq">
+                                <rect key="frame" x="76" y="583" width="37" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="확대"/>
+                                <connections>
+                                    <action selector="btbResizeImage:" destination="4Mo-G0-bSD" eventType="touchUpInside" id="4Xd-te-FdK"/>
+                                    <action selector="btnResizeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tt4-Pe-ALR"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k25-K5-57K">
+                                <rect key="frame" x="76" y="166" width="162" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnResize" destination="zpv-wP-Qmq" id="v9E-TC-sbn"/>
+                        <outlet property="imgView" destination="k25-K5-57K" id="h9X-k5-m5G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="4Mo-G0-bSD" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="453.62318840579712" y="89.732142857142847"/>
+        </scene>
+        <!--Page2 Controller-->
+        <scene sceneID="wa4-we-707">
+            <objects>
+                <viewController storyboardIdentifier="page2" id="OK4-kY-esr" customClass="Page2Controller" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R6V-hp-vMc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPw-uP-qJ7">
+                                <rect key="frame" x="71" y="80" width="121" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" red="0.88888619970000005" green="1" blue="0.35094537409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBack2:" destination="OK4-kY-esr" eventType="touchUpInside" id="6cm-O5-j6Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLe-H1-zjU">
+                                <rect key="frame" x="71" y="530" width="121" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.83046161019999998" blue="0.3871616813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="이전버튼" backgroundImage="lamp_off.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButton:" destination="OK4-kY-esr" eventType="touchUpInside" id="kdX-Sw-zDL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cja-DD-fsz">
+                                <rect key="frame" x="237" y="530" width="121" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.83046161019999998" blue="0.3871616813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="다음버튼" backgroundImage="lamp_on.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButton:" destination="OK4-kY-esr" eventType="touchUpInside" id="Uue-E2-bB1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx9-f6-4tW">
+                                <rect key="frame" x="237" y="80" width="121" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="page3">
+                                    <color key="titleColor" red="0.88888619970000005" green="1" blue="0.35094537409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3Nw-PW-XkZ" kind="show" id="Ytv-dS-L0c"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cake3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WX8-d4-QrI">
+                                <rect key="frame" x="71" y="200" width="287" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ImageViewer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-2g-o31">
+                                <rect key="frame" x="133" y="152" width="162" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YHa-nc-l68"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fD3-2G-faP"/>
+                    <connections>
+                        <outlet property="imgView2" destination="WX8-d4-QrI" id="ciT-kF-gSb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdw-fG-yuh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182.608695652174" y="89.732142857142847"/>
+        </scene>
+        <!--Page3 Controller-->
+        <scene sceneID="KXe-de-wsA">
+            <objects>
+                <viewController storyboardIdentifier="page3" id="3Nw-PW-XkZ" customClass="Page3Controller" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eUc-PA-C6d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u31-zb-uo6">
+                                <rect key="frame" x="147" y="36" width="121" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" red="0.88888619970000005" green="1" blue="0.35094537409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBack3:" destination="3Nw-PW-XkZ" eventType="touchUpInside" id="aAK-yj-k7b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WT5-MA-OtJ">
+                                <rect key="frame" x="76" y="124" width="263" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.47248207419999999" green="1" blue="0.63426129480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <inset key="imageEdgeInsets" minX="100" minY="0.0" maxX="0.0" maxY="50"/>
+                                <state key="normal" title="이미지1">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                    <imageReference key="image" image="book.closed" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnImg1:" destination="3Nw-PW-XkZ" eventType="touchUpInside" id="nWO-6C-iYu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvX-Qv-4UF">
+                                <rect key="frame" x="76" y="218" width="263" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.47248207419999999" green="1" blue="0.63426129480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="이미지2" image="book.closed" catalog="system" backgroundImage="2.png">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnImg2:" destination="3Nw-PW-XkZ" eventType="touchUpInside" id="DrN-Bk-HQp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTc-18-Y9o">
+                                <rect key="frame" x="76" y="312" width="263" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.47248207419999999" green="1" blue="0.63426129480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="이미지3" image="book.closed" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnImg3:" destination="3Nw-PW-XkZ" eventType="touchUpInside" id="8vG-ya-AAB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkq-ap-N4T">
+                                <rect key="frame" x="76" y="500" width="263" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.47248207419999999" green="1" blue="0.63426129480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="이미지5" image="book.closed" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnImg5:" destination="3Nw-PW-XkZ" eventType="touchUpInside" id="dt6-f6-5To"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erg-3g-ORw">
+                                <rect key="frame" x="76" y="594" width="263" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.47248207419999999" green="1" blue="0.63426129480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="이미지6" image="book.closed" catalog="system" backgroundImage="6.png">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnImg6:" destination="3Nw-PW-XkZ" eventType="touchUpInside" id="djc-HR-rEa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaQ-Ds-9Uu">
+                                <rect key="frame" x="76" y="406" width="263" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.47248207419999999" green="1" blue="0.63426129480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="이미지4" image="book.closed" catalog="system" backgroundImage="4.png">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnImg4:" destination="3Nw-PW-XkZ" eventType="touchUpInside" id="OFh-Cu-bhn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PQ5-tp-oHj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mc2-cv-7te"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mEJ-oB-YEn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915.9420289855075" y="-69.642857142857139"/>
+        </scene>
+        <!--Page4 Controller-->
+        <scene sceneID="xTJ-zd-eW0">
+            <objects>
+                <viewController storyboardIdentifier="page4" id="95W-Pq-Jpg" customClass="Page4Controller" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4fT-rE-zQD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVj-I7-D1b">
+                                <rect key="frame" x="147" y="121" width="121" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" red="0.88888619970000005" green="1" blue="0.35094537409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBack4:" destination="95W-Pq-Jpg" eventType="touchUpInside" id="muE-Kq-O5q"/>
+                                    <action selector="btnBackPage4:" destination="Ym2-ka-Z5Z" eventType="touchUpInside" id="5kJ-7g-bbd"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWk-2g-7TF">
+                                <rect key="frame" x="46" y="209" width="322" height="503"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E7f-jK-bsE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView3" destination="KWk-2g-7TF" id="FhF-yP-ER3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yof-QM-htm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ym2-ka-Z5Z" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2582.608695652174" y="-58.258928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2.png" width="128" height="128"/>
+        <image name="4.png" width="128" height="128"/>
+        <image name="6.png" width="128" height="128"/>
+        <image name="book.closed" catalog="system" width="115" height="128"/>
+        <image name="cake3.jpg" width="183" height="275"/>
+        <image name="lamp_off.png" width="1215" height="1920"/>
+        <image name="lamp_on.png" width="1215" height="1920"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
